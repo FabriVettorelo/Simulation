@@ -1,3 +1,5 @@
+const { arrayReplaceAt } = require("markdown-it/lib/common/utils")
+
 /* 
   Importante: 
   No modificar ni el nombre ni los argumetos que reciben las funciones, sólo deben escribir
@@ -9,9 +11,14 @@ function soloNumeros(array) {
   // Debe devolver un arreglo con solo los enteros.
   // Ej: 
   // soloNumeros([1, 'Henry', 2]) debe retornar [1, 2]
-
   // Tu código aca:
-
+  var UnArreglo=[];
+  for (var i= 0; i<array.length; i++){
+    if (array[i] !== array[i].toString()){
+      UnArreglo.push(array[i])
+    }
+  }
+return UnArreglo;
 }
 
 // No modifiques nada debajo de esta linea //
